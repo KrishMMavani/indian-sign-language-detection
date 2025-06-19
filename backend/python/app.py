@@ -13,14 +13,21 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:5173",
+    "https://indian-sign-language-detection.vercel.app"
+]
+
+
 # Configure CORS to allow requests from your React app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Your Vite React app address
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Paths to the model files
 ALPHANUM_MODEL_PATH = "./model/alnum_tuvwxyzski.h5"
@@ -140,6 +147,9 @@ async def predict_sign(image: str, model, class_labels):
             "confidence": 0.0
         }
 
+import os
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
