@@ -1,0 +1,48 @@
+/* Chatbot.css */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .animate-bounce {
+    animation: bounce 1.5s infinite;
+  }
+  
+  /* Smooth transitions for chat opening/closing */
+  .chat-enter {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  .chat-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .chat-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  .chat-exit-active {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 255, 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 242, 255, 0.5);
+  }

@@ -1,0 +1,38 @@
+{
+  "numbers": [
+    { "id": 1, "content": "1", "type": "numbers", "imageUrl": "/images/1.jpg" },
+    { "id": 2, "content": "2", "type": "numbers", "imageUrl": "/images/2.jpg" },
+    { "id": 3, "content": "3", "type": "numbers", "imageUrl": "/images/3.jpg" },
+    { "id": 4, "content": "4", "type": "numbers", "imageUrl": "/images/4.jpg" },
+    { "id": 5, "content": "5", "type": "numbers", "imageUrl": "/images/5.jpg" },
+    { "id": 6, "content": "6", "type": "numbers", "imageUrl": "/images/6.jpg" },
+    { "id": 7, "content": "7", "type": "numbers", "imageUrl": "/images/7.jpg" },
+    { "id": 8, "content": "8", "type": "numbers", "imageUrl": "/images/8.jpg" },
+    { "id": 9, "content": "0", "type": "numbers", "imageUrl": "/images/0.jpg" },
+    { "id": 10, "content": "9", "type": "numbers", "imageUrl": "/images/9.jpg" },
+    { "id": 11, "content": "3", "type": "numbers", "imageUrl": "/images/3.jpg" },
+    { "id": 12, "content": "5", "type": "numbers", "imageUrl": "/images/5.jpg" },
+    { "id": 13, "content": "7", "type": "numbers", "imageUrl": "/images/7.jpg" },
+    { "id": 14, "content": "2", "type": "numbers", "imageUrl": "/images/2.jpg" },
+    { "id": 15, "content": "4", "type": "numbers", "imageUrl": "/images/4.jpg" },
+    { "id": 16, "content": "6", "type": "numbers", "imageUrl": "/images/6.jpg" }
+  ],
+  "alphabets": [
+    { "id": 9, "content": "A", "type": "alphabets", "imageUrl": "/images/A.jpg" },
+    { "id": 10, "content": "B", "type": "alphabets", "imageUrl": "/images/B.jpg" },
+    { "id": 11, "content": "C", "type": "alphabets", "imageUrl": "/images/C.jpg" },
+    { "id": 12, "content": "D", "type": "alphabets", "imageUrl": "/images/D.jpg" },
+    { "id": 13, "content": "E", "type": "alphabets", "imageUrl": "/images/E.jpg" },
+    { "id": 14, "content": "F", "type": "alphabets", "imageUrl": "/images/F.jpg" },
+    { "id": 15, "content": "G", "type": "alphabets", "imageUrl": "/images/G.jpg" },
+    { "id": 16, "content": "H", "type": "alphabets", "imageUrl": "/images/H.jpg" },
+    { "id": 17, "content": "I", "type": "alphabets", "imageUrl": "/images/I.jpg" },
+    { "id": 18, "content": "J", "type": "alphabets", "imageUrl": "/images/J.jpg" },
+    { "id": 19, "content": "K", "type": "alphabets", "imageUrl": "/images/K.jpg" },
+    { "id": 20, "content": "L", "type": "alphabets", "imageUrl": "/images/L.jpg" },
+    { "id": 21, "content": "M", "type": "alphabets", "imageUrl": "/images/M.jpg" },
+    { "id": 22, "content": "N", "type": "alphabets", "imageUrl": "/images/N.jpg" },
+    { "id": 23, "content": "O", "type": "alphabets", "imageUrl": "/images/O.jpg" },
+    { "id": 24, "content": "P", "type": "alphabets", "imageUrl": "/images/P.jpg" }
+  ]
+}
