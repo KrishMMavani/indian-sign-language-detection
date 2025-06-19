@@ -9,18 +9,19 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
-# Set work directory
+# Set working directory
 WORKDIR /app
 
-# Copy code
-COPY . /app
+# Copy all code
+COPY . .
 
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Expose port
+ENV PORT=8000
 EXPOSE 8000
 
-# Run the FastAPI app
-CMD ["python", "app.py"]
+# Start the FastAPI app with uvicorn
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
