@@ -28,7 +28,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 # Paths to the model files
 ALPHANUM_MODEL_PATH = "./model/alnum_tuvwxyzski.h5"
 WORD_MODEL_PATH = "./model/wordmodel24.h5"  # Replace with your word model path
