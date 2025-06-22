@@ -22,26 +22,28 @@ const WebcamCapture: React.FC<WebcamCaptureProps> = ({ mode }) => {
   const [processedSigns, setProcessedSigns] = useState<string[]>([]);
   const [isLive, setIsLive] = useState(false);
   const [isLiveLetter, setIsLiveLetter] = useState(false);
-  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+  const [intervalId, setIntervalId] = useState<ReturnType<typeof setInterval> | null>(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [confidence, setConfidence] = useState<number>(0);
   const [countdown, setCountdown] = useState<number | null>(null);
-  const [captureTimeoutId, setCaptureTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [captureTimeoutId, setCaptureTimeoutId] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [liveTimer, setLiveTimer] = useState(5);
 
   const predictSign = async (imageSrc: string) => {
-    try {
-      const endpoint = mode === 'alphabet' 
-        ? 'http://localhost:8000/predict/alphanum' 
-        : 'http://localhost:8000/predict/word';
-      
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ image: imageSrc }),
-      });
+  try {
+    const baseUrl = import.meta.env.VITE_PYTHON_API_URL;
+
+    const endpoint = mode === 'alphabet'
+      ? `${baseUrl}/predict/alphanum`
+      : `${baseUrl}/predict/word`;
+
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ image: imageSrc }),
+    });
 
       if (!response.ok) {
         throw new Error('Prediction failed');

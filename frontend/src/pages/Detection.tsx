@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Target } from "lucide-react";
 import WebcamCapture from "../components/WebcamCapture";
-import WordPrediction from "../components/wordprediction";
+import WordPrediction from '../components/WordPrediction';
 
 const DetectionPage: React.FC = () => {
   const [selectedMode, setSelectedMode] = useState<"word" | "alphabet" | null>(null);

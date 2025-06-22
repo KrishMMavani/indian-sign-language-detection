@@ -19,14 +19,16 @@ const WordPrediction: React.FC = () => {
 
   const sendFrameToBackend = async (imageSrc: string) => {
     try {
-      const response = await fetch("http://localhost:8000/predict/word", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ image: imageSrc }),
-      });
-
+      const response = await fetch(
+          `${import.meta.env.VITE_PYTHON_API_URL}/predict/word`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ image: imageSrc }),
+          }
+        );
       const data = await response.json();
       if (data.prediction) {
         setPrediction(data.prediction);
