@@ -20,7 +20,7 @@ const WordPrediction: React.FC = () => {
   const sendFrameToBackend = async (imageSrc: string) => {
     try {
       const response = await fetch(
-          `${import.meta.env.VITE_PYTHON_API_URL}/predict/word`,
+          `${import.meta.env.VITE_PYTHON_API_URL || 'http://0.0.0.0:8000 '}/predict/word`,
           {
             method: "POST",
             headers: {

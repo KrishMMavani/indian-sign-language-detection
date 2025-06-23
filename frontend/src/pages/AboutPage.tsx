@@ -5,28 +5,28 @@ import { Users, Heart, Award, BookOpen } from 'lucide-react';
 const AboutPage: React.FC = () => {
   const teamMembers = [
     {
-      name: "Juli Gopani",
-      // role: "Founder & AI Developer",
-      image: "/src/assets/Juli img.jpg", // Updated image path
+      name: "Krish Mavani",
+      role: "Founder & AI Developer",
+      // image: "/src/assets/Juli img.jpg", // Updated image path
       // bio: "Tech enthusiast with expertise in AI and sign language recognition. Passionate about creating accessible technology for all."
     },
     {
-      name: "Hinal Dobaria",
-      // role: "Co-founder & Product Lead",
-      image: "/src/assets/hinal img.jpg",
+      name: "Sujal Vekariya",
+      role: "Co-founder & Product Lead",
+      // image: "/src/assets/hinal img.jpg",
       // bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
     },
     {
-      name: "Shreya Vekariya",
-      // role: "Co-founder & Product Lead",
-      image: "/src/assets/shreya img.jpg",
+      name: "Ayush Mistri",
+      role: "Co-founder & Lead Developer",
+      // image: "/src/assets/shreya img.jpg",
     //   bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
     // 
     },
     {
-      name: "Pratvi Hirpara",
-      // role: "Co-founder & Product Lead",
-      image: "/src/assets/pratvi img.jpg",
+      name: "Jaydeep Rathod",
+      role: "Co-founder & Lead Developer",
+      // image: "/src/assets/pratvi img.jpg",
       // bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
     }
   ];
@@ -80,7 +80,7 @@ const AboutPage: React.FC = () => {
               हस्तवाणी (Hastavaani) was created with the vision of providing an educational platform dedicated entirely to Indian Sign Language. Unlike traditional resources, our platform ensures that learning ISL is interactive, engaging, and structured for students, educators, and anyone eager to learn sign language.
               </p>
               <p>
-              Founded by Juli Gopani, Hinal Dobaria, Shreya Vekariya & Pratvi Hirpara, our platform integrates AI-based gesture recognition, animated sign demonstrations, and interactive learning modules to make sign language education more accessible than ever before.
+              Founded by Krish Mavani, Sujal Vekariya, Ayush Mistri & Jaydeep Rathod, our platform integrates AI-based gesture recognition, animated sign demonstrations, and interactive learning modules to make sign language education more accessible than ever before.
               </p>
               <p>
                 Our name, हस्तवाणी (Hastavaani), combines "हस्त" (hand) and "वाणी" (voice), symbolizing our commitment to transforming hand gestures into an educational voice for all.
@@ -184,15 +184,13 @@ const AboutPage: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-full h-60 rounded-xl overflow-hidden mb-4"> {/* Adjusted height */}
                     <img
-                      src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <div className="text-center">
                     <h3 className="text-xl font-semibold">{member.name}</h3>
-                    {/* <p className="text-accent mb-2">{member.role}</p>
-                    <p className="text-gray-300">{member.bio}</p> */}
+                    {<p className="text-accent mb-2">{member.role}</p>}
                   </div>
                 </div>
               </motion.div>

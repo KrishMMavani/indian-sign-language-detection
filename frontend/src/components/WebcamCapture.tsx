@@ -31,7 +31,7 @@ const WebcamCapture: React.FC<WebcamCaptureProps> = ({ mode }) => {
 
   const predictSign = async (imageSrc: string) => {
   try {
-    const baseUrl = import.meta.env.VITE_PYTHON_API_URL;
+    const baseUrl = import.meta.env.VITE_PYTHON_API_URL || 'http://0.0.0.0:8000 ';
 
     const endpoint = mode === 'alphabet'
       ? `${baseUrl}/predict/alphanum`
