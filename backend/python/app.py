@@ -15,14 +15,14 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "https://indian-sign-language-detection.vercel.app/"
+    "https://indian-sign-language-detection-tb4a.vercel.app/"
 ]
 
 
 # Configure CORS to allow requests from your React app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origin_regex=".*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
