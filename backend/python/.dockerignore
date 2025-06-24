@@ -1,0 +1,37 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore model checkpoints or training artifacts (optional)
+*.h5
+*.hdf5
+*.pb
+*.ckpt
+
+# Ignore local environments
+.env
+.venv/
+env/
+venv/
+
+# Ignore logs or temp files
+*.log
+*.tmp
+*.bak
+
+# Ignore Jupyter notebooks (if not needed)
+*.ipynb
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore git stuff (Docker doesn’t need this)
+.git
+.gitignore
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
