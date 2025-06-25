@@ -13,20 +13,24 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:5173",
-    "https://indian-sign-language-detection.vercel.app"
-]
+# origins = [
+#     "http://localhost:5173",
+#     "https://indian-sign-language-detection.vercel.app"
+# ]
 
 
 # Configure CORS to allow requests from your React app
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=origins,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://indian-sign-language-detection.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Paths to the model files
 ALPHANUM_MODEL_PATH = "./model/alnum_tuvwxyzski.h5"
