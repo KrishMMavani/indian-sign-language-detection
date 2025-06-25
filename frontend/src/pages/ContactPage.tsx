@@ -98,7 +98,6 @@ const ContactPage: React.FC = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    
                     <a href="tel:+919157571910" className="text-white hover:text-accent">
                       +91 9157571910
                     </a>
@@ -108,11 +107,11 @@ const ContactPage: React.FC = () => {
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  {/* <div>
-                    <a href="tel:+919876543210" className="text-white hover:text-accent">
-                      +91 9876543210
+                  <div>
+                    <a href="tel:+919429418118" className="text-white hover:text-accent">
+                      +91 9429418118
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>

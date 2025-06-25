@@ -3,33 +3,28 @@ import { motion } from 'framer-motion';
 import { Users, Heart, Award, BookOpen } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-  const teamMembers = [
-    {
-      name: "Krish Mavani",
-      role: "Founder & AI Developer",
-      // image: "/src/assets/Juli img.jpg", // Updated image path
-      // bio: "Tech enthusiast with expertise in AI and sign language recognition. Passionate about creating accessible technology for all."
-    },
-    {
-      name: "Sujal Vekariya",
-      role: "Co-founder & Product Lead",
-      // image: "/src/assets/hinal img.jpg",
-      // bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
-    },
-    {
-      name: "Ayush Mistri",
-      role: "Co-founder & Lead Developer",
-      // image: "/src/assets/shreya img.jpg",
-    //   bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
-    // 
-    },
-    {
-      name: "Jaydeep Rathod",
-      role: "Co-founder & Lead Developer",
-      // image: "/src/assets/pratvi img.jpg",
-      // bio: "UX specialist focused on creating intuitive and accessible interfaces. Dedicated to bridging education gaps through technology."
-    }
-  ];
+const teamMembers = [
+  {
+    name: "Krish Mavani",
+    role: "Founder & AI Developer",
+    image: "/assets/Krish img.jpg", // ✅ correct path
+  },
+  {
+    name: "Sujal Vekariya",
+    role: "Co-founder & Product Lead",
+    image: "/assets/sujal img.jpg",
+  },
+  {
+    name: "Nand Banugariya",
+    role: "Co-founder & Lead Developer",
+    image: "/assets/nand img.jpg",
+  },
+  {
+    name: "Jaydeep Rathod",
+    role: "Co-founder & Lead Developer",
+    image: "/assets/Jaydeep img.jpg",
+  }
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -80,7 +75,7 @@ const AboutPage: React.FC = () => {
               हस्तवाणी (Hastavaani) was created with the vision of providing an educational platform dedicated entirely to Indian Sign Language. Unlike traditional resources, our platform ensures that learning ISL is interactive, engaging, and structured for students, educators, and anyone eager to learn sign language.
               </p>
               <p>
-              Founded by Krish Mavani, Sujal Vekariya, Ayush Mistri & Jaydeep Rathod, our platform integrates AI-based gesture recognition, animated sign demonstrations, and interactive learning modules to make sign language education more accessible than ever before.
+              Founded by Krish Mavani, Sujal Vekariya, Nand Banugariya & Jaydeep Rathod, our platform integrates AI-based gesture recognition, animated sign demonstrations, and interactive learning modules to make sign language education more accessible than ever before.
               </p>
               <p>
                 Our name, हस्तवाणी (Hastavaani), combines "हस्त" (hand) and "वाणी" (voice), symbolizing our commitment to transforming hand gestures into an educational voice for all.
@@ -96,7 +91,7 @@ const AboutPage: React.FC = () => {
           >
             <div className="relative rounded-xl overflow-hidden border border-accent/20 shadow-lg shadow-accent/10 w-2/3 mx-auto"> {/* Reduced width */}
               <img 
-                src="/src/assets/about2.jpg" 
+                src="/assets/about2.jpg" 
                 alt="हस्तवाणी Team" 
                 className="w-full h-auto object-contain" // Ensures the entire image is visible
               />
@@ -175,26 +170,27 @@ const AboutPage: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-dark-lighter p-4 rounded-xl border border-dark-lightest overflow-hidden"
-                variants={itemVariants}
-              >
-                <div className="flex flex-col items-center">
-                  <div className="w-full h-60 rounded-xl overflow-hidden mb-4"> {/* Adjusted height */}
-                    <img
-                      alt={member.name}
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-xl font-semibold">{member.name}</h3>
-                    {<p className="text-accent mb-2">{member.role}</p>}
-                  </div>
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              className="bg-dark-lighter p-4 rounded-xl border border-dark-lightest overflow-hidden"
+              variants={itemVariants}
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-full h-60 rounded-xl overflow-hidden mb-4">
+                  <img
+                    src={member.image} // ✅ Set the actual image source
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
-              </motion.div>
-            ))}
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
+                  <p className="text-accent mb-2">{member.role}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
           </motion.div>
         </motion.div>
       </div>
