@@ -15,7 +15,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "https://indian-sign-language-detection.vercel.app/"
+    "https://indian-sign-language-detection.vercel.app"
 ]
 
 
