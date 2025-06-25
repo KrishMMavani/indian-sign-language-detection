@@ -22,7 +22,7 @@ origins = [
 # Configure CORS to allow requests from your React app
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=".*",
+    allow_origin_regex=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
